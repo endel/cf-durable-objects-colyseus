@@ -1,0 +1,10 @@
+{
+  "name": "colyseus-cf-durable-objects",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "durable_objects": {
+    "bindings": [{ "name": "COLYSEUS", "class_name": "ColyseusServer" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ColyseusServer"] }]
+}

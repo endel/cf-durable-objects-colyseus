@@ -1,0 +1,16 @@
+{
+  "name": "colyseus-cf-tpr-bench",
+  "main": "src/tpr.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // the game lives in another repo: pin it to this project's Colyseus copies
+  "alias": {
+    "colyseus": "./node_modules/@colyseus/core/build/index.mjs",
+    "@colyseus/schema": "./node_modules/@colyseus/schema"
+  },
+  "vars": { "NODE_ENV": "production" },
+  "durable_objects": {
+    "bindings": [{ "name": "COLYSEUS", "class_name": "TrashPandaServer" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["TrashPandaServer"] }]
+}
